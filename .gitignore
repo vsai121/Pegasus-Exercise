@@ -1,0 +1,5 @@
+*.yml
+wf-output/
+wf-scratch/
+scitech/
+root/
