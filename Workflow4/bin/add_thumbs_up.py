@@ -1,21 +1,16 @@
 #!/usr/bin/env python3
 import sys
 import emojis
+import argparse
 
-# total arguments
-n = len(sys.argv)
-print("Total arguments passed:", n)
+parser = argparse.ArgumentParser("parser for input and output file")
+parser.add_argument('-I', '--input', required=True, metavar = '', help='input file')
+parser.add_argument('-O', '--output', required=True, metavar='', help='output file')
 
-# Arguments passed
-print("\nName of Python script:", sys.argv[0])
+args = parser.parse_args()
 
-print("\nArguments passed:", end = " ")
-for i in range(1, n):
-   print(sys.argv[i], end = " ")
-   
-print('\n')
-inputFilePath = sys.argv[1]
-outputFileName = sys.argv[2]
+inputFilePath = args.input
+outputFileName = args.output
    
 print(inputFilePath)
 print(outputFileName)

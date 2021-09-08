@@ -40,7 +40,7 @@ wf = Workflow("workflow4")
 
 outputFile = File(outputFileName)
 job_add_thumbs_up = Job(add_thumbs_up)\
-                .add_args(inputFileName, outputFileName)\
+                .add_args('-I', inputFileName, '-O', outputFileName)\
                 .add_inputs(inputFile)\
                 .add_outputs(outputFile)
 
